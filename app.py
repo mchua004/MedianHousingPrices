@@ -5,11 +5,13 @@ from sqlalchemy import create_engine, func
 
 from flask import Flask, jsonify
 
+from config import username, password
+
 #################################################
 # Database Setup
 #################################################
 
-connection_string = "postgres:postgres@localhost:5432/housing_prices_db"
+connection_string = f'{username}:{password}@localhost:5432/housing_prices_db'
 engine = create_engine(f'postgresql://{connection_string}')
 
 # reflect an existing database into a new model
@@ -94,10 +96,10 @@ def master_data_file():
 
     final_result = {"metadata": master_file}
 
-    with open(r'C:\Users\Mark\Desktop\Samples.json', 'w') as json_file:
+    with open('Samples.json', 'w') as json_file:
         json.dump(final_result, json_file)
 
-    return final_result
+    return jsonify(final_result)
 
 if __name__ == '__main__':
     app.run(debug=True)
