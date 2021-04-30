@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Project 2</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 jumbotron text-center">
+        <h1>Key facts about US median income and housing price 2017-2019</h1>
+        <p>Use the interactive charts below to explore the dataset</p>
+      </div>
+    </div>
+      <main class="container">
+        <section id="main-bio">
+          <p>Utilizing the data on media income and housing prices by select metro area and state for 2017-2019, our goal is to determine if there were any changes in the housing prices and income levels during its timeframe. *Median Income for Washington DC is not available* </p>
+        </section>
+      </main>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="well">
+          <h5>See by Year:</h5>
+          <select id="selDataset"></select>
+        </div>
+      <div class="col-md-6">
+        <h2>Median Housing Price of Top 10 Metro cities in the US</h2>
+        <div id="scatter1"></div>
+      </div>
+          <div class = "col-md-6">
+            <h2>Median Income of Top 10 Metro cities in the US</h2>
+            <div id = "bar1"></div>
+        </div>
+        </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="well">
+          <h5>See by City:</h5>
+          <select id="selDataset1"></select>
+        </div>
+      <div class="col-md-6">
+        <h2>Median Housing Price of the Selected City</h2>
+        <div id="scatter2"></div>
+      </div>
+          <div class = "col-md-6">
+            <h2>Median Income of the Selected City</h2>
+            <div id = "bar2"></div>
+        </div>
+        </div>
+
+    </div>
+      <aside id="contact-info">
+        <ul>
+          <li><strong>Github:</strong> 
+            <a>https://github.com/mchua004/MedianHousingPrices</a></li>
+        </ul>
+      </aside>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+  <script src="app2.js"></script>
+  <script src="app5.js"></script>
+  <script src="Samples.json"></script>
+  
+</body>
+
+</html>
